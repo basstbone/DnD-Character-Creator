@@ -154,16 +154,24 @@ app.delete('/api/dev/clear', async function (req, res) {
   }
 )
 
-app.delete('/api/items/:id', async function(req, res) {
-
+//iss12 
+app.patch('/api/items/:id',
+  async function(req, res) {
     const id = new ObjectId(req.params.id);
-
-    const result = await collection.deleteOne({_id: id});
-
+    const changes = req.body;
+    const result = await collection
+        .updateOne({ _id: id }, { $set: changes });
     res.json(result);
+});
 
-  }
-);
+//iss20
+app.delete('/api/items/:id',
+  async function(req, res) {
+    const id = new ObjectId(req.params.id);
+    const result = await collection.deleteOne({ _id: id });
+    res.json(result);
+});
+
 //start up server
 
 app.listen(3000, () => {
