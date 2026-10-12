@@ -27,10 +27,10 @@ jobs:
       - name: Deploy over SSH
         shell: bash
         env:
-          SSH_USER: barrycumbie #${{ secrets.SSH_USER }}
-          SSH_HOST: 8.234.41.172 #${{ secrets.SSH_HOST }}
+          SSH_USER: basstbone #${{ secrets.SSH_USER }}
+          SSH_HOST: 34.152.7.76 #${{ secrets.SSH_HOST }}
           APP_DIR:  app/server # ${{ vars.APP_DIR }}
-          PM2_NAME: app # ${{ vars.PM2_NAME }}
+          PM2_NAME: mongo # ${{ vars.PM2_NAME }}
         run: |
           ssh -i ~/.ssh/deploy_key -T "$SSH_USER@$SSH_HOST" <<EOF
             set -e
@@ -40,7 +40,7 @@ jobs:
             git pull
             npm ci
 
-            pm2 restart "$PM2_NAME" || pm2 start app.mjs --name "$PM2_NAME"
+            pm2 restart "$PM2_NAME" || pm2 start mongo.js --name "$PM2_NAME"
 
             pm2 save
           EOF
