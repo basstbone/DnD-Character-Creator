@@ -1,11 +1,19 @@
 # Fullstack-Slider
 > Repo showing CRUD with MongoDB connections
 
+### authorship and version
+
 `@basstbone` | `2026-10-12` | `HOTEL`
 
+### deployments, codebase, and repo features
 
 | requirement | evidence |
 | --- | --- |
+| main | [main](https://github.com/basstbone/fullstack-slider) |
+| PROD | [PROD](https://soliver.barrycumbie.com/) |
+| dev | [dev](https://github.com/basstbone/fullstack-slider/tree/dev) |
+| DEV | [DEV](https://fullstack-slider.onrender.com) |
+| docs | [docs](https://github.com/basstbone/fullstack-slider/tree/main/docs) |
 | MongoDB connection | [server code](https://github.com/basstbone/fullstack-slider/blob/a77b674ba4eed2213eeb01c682a68ce97d2f2358/server/mongo.js#L19) |
 | GET all |  [endpoint code](https://github.com/basstbone/fullstack-slider/blob/a77b674ba4eed2213eeb01c682a68ce97d2f2358/server/mongo.js#L73) |
 | GET one | [endpoint code](https://github.com/basstbone/fullstack-slider/blob/a77b674ba4eed2213eeb01c682a68ce97d2f2358/server/mongo.js#L101) |
@@ -23,4 +31,50 @@
 | PROD deployment | [GitHub Action](https://github.com/basstbone/fullstack-slider/actions/runs/38272772944) |
 
 ### user story
-- **As a** 
+- **As a** beginner developer
+- **I want** a place to develop
+- **so that** I can improve my skills
+
+### architecture
+
+``` text
+LOCAL
+  │
+  ▼
+GitHub
+  │
+  ├── dev  ──► Render ─────────► DEV
+  │
+  └── main ──► GitHub Actions ─► GCP ──► PROD
+```
+
+### stack
+
+HTML/CSS/JS | Bootstrap 5 | Node.js | Express | REST |
+MongoDB | Atlas | Git/GitHub | GCP | Nginx | PM2 | GitHub Actions
+
+### project structure
+
+``` text
+repo/
+├── .github/
+│   └── workflows/
+├── docs/
+│   └── README.md
+├── public/
+│   ├── index.html
+│   ├── css/
+│   └── js/
+├── server/
+│   ├── app.js
+│   ├── mongo.js
+│   ├── package.json
+│   └── package-lock.json
+└── .gitignore
+```
+
+### GCP
+
+external IP: `34.152.7.76`\
+Linux user: `seanolivertbone`\
+instructor SSH public key installed: `yes`
