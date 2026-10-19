@@ -1,5 +1,4 @@
 # DnD Character Creator (DCC)
-> Repo showing CRUD with MongoDB connections
 
 ### authorship and version
 
