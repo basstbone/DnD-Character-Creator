@@ -1,4 +1,4 @@
-# DnD Character Creator (DCC)
+# DnD Character Creator (DCC) yaml
 
 ### authorship and version
 
