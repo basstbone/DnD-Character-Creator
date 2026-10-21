@@ -2,7 +2,7 @@
 
 ### authorship and version
 
-`@basstbone` | `2026-10-19` | `INDIA`
+`@basstbone` | `2026-10-21` | `INDIA`
 
 ## WHO
 Project --- DnD Character Creator --- Create, customize, and bring your Dungeons & Dragons characters to life with an easy-to-use character creator for new players.<br>
@@ -39,7 +39,8 @@ Starting point --- There are already several DCC websites like:<br>
 Direction --- By KILO I want this project to be something a beginner can use with little to no outside help<br>
 Capabilities --- Guided Character Creation, Random Character Creation, and Character Management<br>
 Biggest unknowns --- how to print/download and random gens<br>
-Project Links ---
+Project Links --- 
+[Milestones](https://github.com/basstbone/DnD-Character-Creator/milestones) | [DEV](https://github.com/basstbone/DnD-Character-Creator/tree/dev) | [Backlog](https://github.com/basstbone/DnD-Character-Creator/issues)
 
 ## SPRINT 99
 I hope to one day have a DCC that can be used by anyone for level 1 - 20
