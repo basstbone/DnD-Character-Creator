@@ -3,40 +3,105 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Character</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Create Character | 5E Compatible</title>
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/scripts.js" defer></script>
 </head>
 
 <body>
-
     <header>
         <h1>D&D Character Creator</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="create.html" class="active">Create Character</a>
-            <a href="random.html">Random Character</a>
-            <a href="characters.html">My Characters</a>
-        </nav>
+        <nav><a href="index.html">Home</a><a href="create.html" class="active">Create Character</a><a
+                href="random.html">Random Character</a><a href="characters.html">My Characters</a></nav>
     </header>
-
     <main>
-        <section class="page-content">
+        <section class="character-form">
             <h2>Create Your Character</h2>
-            <p>
-                Build your D&D character by choosing
-                your species, class, background,
-                and ability scores.
-            </p>
-            <p>Character creation coming soon!</p>
+            <p>Using SRD 5.2.1 rules. Supports levels 1–5.</p>
+            <p id="loadError" role="alert"></p>
+
+            <!-- Loading Animation -->
+            <div id="loadingScreen" class="loading-screen" role="status">
+                <div class="loading-spinner"></div>
+
+                <h3>Preparing Your Adventure...</h3>
+
+                <p>Loading character options and SRD rules.</p>
+            </div>
+
+            <form id="characterForm" hidden>
+                <fieldset>
+                    <legend>Basic Information</legend>
+                    <div class="form-group"><label for="characterName">Character Name</label><input id="characterName"
+                            name="characterName" required maxlength="80"></div>
+                    <div class="form-group"><label for="species">Species</label><select id="species" required>
+                            <option value="">Select Species</option>
+                        </select></div>
+                    <div class="form-group"><label for="characterClass">Class</label><select id="characterClass"
+                            required>
+                            <option value="">Select Class</option>
+                        </select></div>
+                    <div class="form-group"><label for="background">Background</label><select id="background" required>
+                            <option value="">Select Background</option>
+                        </select></div>
+                    <div class="form-group"><label for="level">Level</label><select id="level" required></select></div>
+                    <p id="backgroundInfo" aria-live="polite"></p>
+                </fieldset>
+                <fieldset>
+                    <legend>Ability Scores</legend>
+                    <p>Choose one of the three SRD ability score methods. Scores below are before background increases.
+                    </p>
+                    <div class="form-group"><label for="scoreMethod">Ability Score Method</label><select
+                            id="scoreMethod">
+                            <option value="standard">Standard Array (15, 14, 13, 12, 10, 8)</option>
+                            <option value="pointBuy">Point Cost (27 points)</option>
+                            <option value="rolled">Random Generation (4d6, drop lowest)</option>
+                        </select></div>
+                    <p id="methodHelp" aria-live="polite"></p>
+                    <div id="rollControls" hidden><button type="button" id="rollScores">Roll Six Scores</button>
+                        <p id="rollResults" aria-live="polite"></p>
+                    </div>
+                    <p id="pointBudget" aria-live="polite"></p>
+                    <div class="ability-grid" id="abilityInputs"></div>
+                    <p id="scoreError" role="alert" aria-live="polite"></p>
+                    <div class="form-group"><label for="increaseMethod">Background Increases</label><select
+                            id="increaseMethod">
+                            <option value="2-1">+2 to one and +1 to another</option>
+                            <option value="1-1-1">+1 to all three</option>
+                        </select></div>
+                    <div id="boostChoices" class="ability-grid"></div>
+                </fieldset>
+                <fieldset>
+                    <legend>Character Details</legend>
+                    <div class="form-group"><label for="alignment">Alignment (optional)</label><select id="alignment">
+                            <option value="">Not selected</option>
+                            <option>Lawful Good</option>
+                            <option>Neutral Good</option>
+                            <option>Chaotic Good</option>
+                            <option>Lawful Neutral</option>
+                            <option>Neutral</option>
+                            <option>Chaotic Neutral</option>
+                            <option>Lawful Evil</option>
+                            <option>Neutral Evil</option>
+                            <option>Chaotic Evil</option>
+                        </select></div>
+                    <div class="form-group"><label for="description">Description (optional)</label><textarea
+                            id="description" rows="4"></textarea></div>
+                </fieldset>
+                <div class="form-buttons"><button type="reset" class="reset-button">Reset Form</button><button
+                        class="button" type="submit">Preview Character</button></div>
+            </form>
+            <section id="preview" aria-live="polite" hidden></section>
         </section>
     </main>
-
     <footer>
-        <p>D&D Character Creator</p>
+        <p id="license">This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of
+            the Coast LLC, available at <a href="https://www.dndbeyond.com/srd">https://www.dndbeyond.com/srd</a>. The
+            SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at <a
+                href="https://creativecommons.org/licenses/by/4.0/legalcode">https://creativecommons.org/licenses/by/4.0/legalcode</a>.
+        </p>
     </footer>
-
 </body>
 
 </html>

@@ -1,0 +1,78 @@
+{
+    "version": "SRD 5.2.1",
+    "levels": [
+        1,
+        2,
+        3,
+        4,
+        5
+    ],
+    "standardArray": [
+        15,
+        14,
+        13,
+        12,
+        10,
+        8
+    ],
+    "proficiencyBonus": {
+        "1": 2,
+        "2": 2,
+        "3": 2,
+        "4": 2,
+        "5": 3
+    },
+    "abilities": [
+        "STR",
+        "DEX",
+        "CON",
+        "INT",
+        "WIS",
+        "CHA"
+    ],
+    "backgroundIncreasePatterns": [
+        [
+            2,
+            1
+        ],
+        [
+            1,
+            1,
+            1
+        ]
+    ],
+    "source": "https://www.dndbeyond.com/srd",
+    "abilityScoreMethods": {
+        "standard": {
+            "array": [
+                15,
+                14,
+                13,
+                12,
+                10,
+                8
+            ]
+        },
+        "pointBuy": {
+            "budget": 27,
+            "min": 8,
+            "max": 15,
+            "costs": {
+                "8": 0,
+                "9": 1,
+                "10": 2,
+                "11": 3,
+                "12": 4,
+                "13": 5,
+                "14": 7,
+                "15": 9
+            }
+        },
+        "rolled": {
+            "dice": 4,
+            "sides": 6,
+            "dropLowest": 1,
+            "rolls": 6
+        }
+    }
+}

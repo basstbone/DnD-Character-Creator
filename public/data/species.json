@@ -1,0 +1,194 @@
+{
+    "Dragonborn": {
+        "speedFeet": 30,
+        "size": "Medium",
+        "traits": [
+            "Draconic Ancestry (damage type choice)",
+            "Breath Weapon",
+            "Damage Resistance",
+            "Darkvision",
+            "Draconic Flight (level 5)"
+        ],
+        "abilityScoreBonuses": "From background, not species",
+        "choicesAndScaling": {
+            "ancestryDamageTypes": [
+                "Acid",
+                "Lightning",
+                "Fire",
+                "Poison",
+                "Cold"
+            ],
+            "breathWeaponSave": "8 + CON modifier + proficiency bonus",
+            "breathWeaponUses": "proficiency bonus per Long Rest",
+            "breathWeaponDiceByLevel": {
+                "1": "1d10",
+                "5": "2d10"
+            },
+            "flightUnlockLevel": 5
+        }
+    },
+    "Dwarf": {
+        "speedFeet": 30,
+        "size": "Medium",
+        "traits": [
+            "Darkvision",
+            "Dwarven Resilience",
+            "Dwarven Toughness (+1 HP per level)",
+            "Stonecunning"
+        ],
+        "abilityScoreBonuses": "From background, not species"
+    },
+    "Elf": {
+        "speedFeet": 30,
+        "size": "Medium",
+        "traits": [
+            "Darkvision",
+            "Elven Lineage (Drow, High Elf, Wood Elf)",
+            "Fey Ancestry",
+            "Keen Senses",
+            "Trance"
+        ],
+        "abilityScoreBonuses": "From background, not species",
+        "choicesAndScaling": {
+            "Drow": {
+                "spellcastingAbilityChoice": [
+                    "INT",
+                    "WIS",
+                    "CHA"
+                ],
+                "spellsByCharacterLevel": {
+                    "1": [
+                        "Dancing Lights"
+                    ],
+                    "3": [
+                        "Faerie Fire"
+                    ],
+                    "5": [
+                        "Darkness"
+                    ]
+                }
+            },
+            "High Elf": {
+                "spellcastingAbilityChoice": [
+                    "INT",
+                    "WIS",
+                    "CHA"
+                ],
+                "spellsByCharacterLevel": {
+                    "1": [
+                        "Prestidigitation (replaceable Wizard cantrip)"
+                    ],
+                    "3": [
+                        "Detect Magic"
+                    ],
+                    "5": [
+                        "Misty Step"
+                    ]
+                }
+            },
+            "Wood Elf": {
+                "spellcastingAbilityChoice": [
+                    "INT",
+                    "WIS",
+                    "CHA"
+                ],
+                "spellsByCharacterLevel": {
+                    "1": [
+                        "Druidcraft"
+                    ],
+                    "3": [
+                        "Longstrider"
+                    ],
+                    "5": [
+                        "Pass without Trace"
+                    ]
+                }
+            }
+        }
+    },
+    "Gnome": {
+        "speedFeet": 30,
+        "size": "Small",
+        "traits": [
+            "Darkvision",
+            "Gnomish Cunning",
+            "Gnomish Lineage (Forest or Rock)"
+        ],
+        "abilityScoreBonuses": "From background, not species",
+        "choicesAndScaling": {
+            "lineages": [
+                "Forest",
+                "Rock"
+            ]
+        }
+    },
+    "Goliath": {
+        "speedFeet": 35,
+        "size": "Medium",
+        "traits": [
+            "Giant Ancestry (choose heritage)",
+            "Large Form (level 5)",
+            "Powerful Build"
+        ],
+        "abilityScoreBonuses": "From background, not species",
+        "choicesAndScaling": {
+            "giantAncestries": [
+                "Cloud",
+                "Fire",
+                "Frost",
+                "Hill",
+                "Stone",
+                "Storm"
+            ],
+            "largeFormUnlockLevel": 5
+        }
+    },
+    "Halfling": {
+        "speedFeet": 30,
+        "size": "Small",
+        "traits": [
+            "Brave",
+            "Halfling Nimbleness",
+            "Luck",
+            "Naturally Stealthy"
+        ],
+        "abilityScoreBonuses": "From background, not species"
+    },
+    "Human": {
+        "speedFeet": 30,
+        "size": "Medium or Small",
+        "traits": [
+            "Resourceful",
+            "Skillful",
+            "Versatile (additional Origin feat)"
+        ],
+        "abilityScoreBonuses": "From background, not species"
+    },
+    "Orc": {
+        "speedFeet": 30,
+        "size": "Medium",
+        "traits": [
+            "Adrenaline Rush",
+            "Darkvision",
+            "Relentless Endurance"
+        ],
+        "abilityScoreBonuses": "From background, not species"
+    },
+    "Tiefling": {
+        "speedFeet": 30,
+        "size": "Medium or Small",
+        "traits": [
+            "Darkvision",
+            "Fiendish Legacy (Abyssal, Chthonic, Infernal)",
+            "Otherworldly Presence"
+        ],
+        "abilityScoreBonuses": "From background, not species",
+        "choicesAndScaling": {
+            "legacies": [
+                "Abyssal",
+                "Chthonic",
+                "Infernal"
+            ]
+        }
+    }
+}
