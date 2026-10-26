@@ -1,0 +1,605 @@
+{
+    "Barbarian": {
+        "hitDie": 12,
+        "savingThrowProficiencies": [
+            "STR",
+            "CON"
+        ],
+        "spellcastingAbility": null,
+        "featuresByLevel": {
+            "1": [
+                "Rage",
+                "Unarmored Defense",
+                "Weapon Mastery"
+            ],
+            "2": [
+                "Danger Sense",
+                "Reckless Attack"
+            ],
+            "3": [
+                "Primal Knowledge",
+                "Subclass"
+            ],
+            "4": [
+                "Ability Score Improvement"
+            ],
+            "5": [
+                "Extra Attack",
+                "Fast Movement"
+            ]
+        },
+        "subclassLevel": 3,
+        "skillChoices": {
+            "choose": 2,
+            "from": [
+                "Animal Handling",
+                "Athletics",
+                "Intimidation",
+                "Nature",
+                "Perception",
+                "Survival"
+            ]
+        },
+        "hitPoints": {
+            "level1": "12 + CON modifier (minimum 1)",
+            "laterLevels": "1d12 or fixed average + CON modifier (minimum 1 gained)"
+        },
+        "subclassDetails": {
+            "included": "names and selection level only",
+            "additionalFeatures": "See licensed SRD 5.2.1 for the included subclass; PHB for other subclasses"
+        }
+    },
+    "Bard": {
+        "hitDie": 8,
+        "savingThrowProficiencies": [
+            "DEX",
+            "CHA"
+        ],
+        "spellcastingAbility": "CHA",
+        "featuresByLevel": {
+            "1": [
+                "Bardic Inspiration",
+                "Spellcasting"
+            ],
+            "2": [
+                "Expertise",
+                "Jack of All Trades"
+            ],
+            "3": [
+                "Subclass"
+            ],
+            "4": [
+                "Ability Score Improvement"
+            ],
+            "5": [
+                "Font of Inspiration"
+            ]
+        },
+        "subclassLevel": 3,
+        "skillChoices": {
+            "choose": 3,
+            "from": [
+                "Acrobatics",
+                "Animal Handling",
+                "Arcana",
+                "Athletics",
+                "Deception",
+                "History",
+                "Insight",
+                "Intimidation",
+                "Investigation",
+                "Medicine",
+                "Nature",
+                "Perception",
+                "Performance",
+                "Persuasion",
+                "Religion",
+                "Sleight of Hand",
+                "Stealth",
+                "Survival"
+            ]
+        },
+        "hitPoints": {
+            "level1": "8 + CON modifier (minimum 1)",
+            "laterLevels": "1d8 or fixed average + CON modifier (minimum 1 gained)"
+        },
+        "subclassDetails": {
+            "included": "names and selection level only",
+            "additionalFeatures": "See licensed SRD 5.2.1 for the included subclass; PHB for other subclasses"
+        }
+    },
+    "Cleric": {
+        "hitDie": 8,
+        "savingThrowProficiencies": [
+            "WIS",
+            "CHA"
+        ],
+        "spellcastingAbility": "WIS",
+        "featuresByLevel": {
+            "1": [
+                "Spellcasting",
+                "Divine Order"
+            ],
+            "2": [
+                "Channel Divinity"
+            ],
+            "3": [
+                "Subclass"
+            ],
+            "4": [
+                "Ability Score Improvement"
+            ],
+            "5": [
+                "Sear Undead"
+            ]
+        },
+        "subclassLevel": 3,
+        "skillChoices": {
+            "choose": 2,
+            "from": [
+                "History",
+                "Insight",
+                "Medicine",
+                "Persuasion",
+                "Religion"
+            ]
+        },
+        "hitPoints": {
+            "level1": "8 + CON modifier (minimum 1)",
+            "laterLevels": "1d8 or fixed average + CON modifier (minimum 1 gained)"
+        },
+        "subclassDetails": {
+            "included": "names and selection level only",
+            "additionalFeatures": "See licensed SRD 5.2.1 for the included subclass; PHB for other subclasses"
+        }
+    },
+    "Druid": {
+        "hitDie": 8,
+        "savingThrowProficiencies": [
+            "INT",
+            "WIS"
+        ],
+        "spellcastingAbility": "WIS",
+        "featuresByLevel": {
+            "1": [
+                "Spellcasting",
+                "Druidic",
+                "Primal Order"
+            ],
+            "2": [
+                "Wild Shape",
+                "Wild Companion"
+            ],
+            "3": [
+                "Subclass"
+            ],
+            "4": [
+                "Ability Score Improvement"
+            ],
+            "5": [
+                "Wild Resurgence"
+            ]
+        },
+        "subclassLevel": 3,
+        "skillChoices": {
+            "choose": 2,
+            "from": [
+                "Arcana",
+                "Animal Handling",
+                "Insight",
+                "Medicine",
+                "Nature",
+                "Perception",
+                "Religion",
+                "Survival"
+            ]
+        },
+        "hitPoints": {
+            "level1": "8 + CON modifier (minimum 1)",
+            "laterLevels": "1d8 or fixed average + CON modifier (minimum 1 gained)"
+        },
+        "subclassDetails": {
+            "included": "names and selection level only",
+            "additionalFeatures": "See licensed SRD 5.2.1 for the included subclass; PHB for other subclasses"
+        }
+    },
+    "Fighter": {
+        "hitDie": 10,
+        "savingThrowProficiencies": [
+            "STR",
+            "CON"
+        ],
+        "spellcastingAbility": null,
+        "featuresByLevel": {
+            "1": [
+                "Fighting Style",
+                "Second Wind",
+                "Weapon Mastery"
+            ],
+            "2": [
+                "Action Surge",
+                "Tactical Mind"
+            ],
+            "3": [
+                "Subclass"
+            ],
+            "4": [
+                "Ability Score Improvement"
+            ],
+            "5": [
+                "Extra Attack",
+                "Tactical Shift"
+            ]
+        },
+        "subclassLevel": 3,
+        "skillChoices": {
+            "choose": 2,
+            "from": [
+                "Acrobatics",
+                "Animal Handling",
+                "Athletics",
+                "History",
+                "Insight",
+                "Intimidation",
+                "Persuasion",
+                "Perception",
+                "Survival"
+            ]
+        },
+        "hitPoints": {
+            "level1": "10 + CON modifier (minimum 1)",
+            "laterLevels": "1d10 or fixed average + CON modifier (minimum 1 gained)"
+        },
+        "subclassDetails": {
+            "included": "names and selection level only",
+            "additionalFeatures": "See licensed SRD 5.2.1 for the included subclass; PHB for other subclasses"
+        }
+    },
+    "Monk": {
+        "hitDie": 8,
+        "savingThrowProficiencies": [
+            "STR",
+            "DEX"
+        ],
+        "spellcastingAbility": null,
+        "featuresByLevel": {
+            "1": [
+                "Martial Arts",
+                "Unarmored Defense"
+            ],
+            "2": [
+                "Monk's Focus",
+                "Unarmored Movement",
+                "Uncanny Metabolism"
+            ],
+            "3": [
+                "Deflect Attacks",
+                "Subclass"
+            ],
+            "4": [
+                "Ability Score Improvement",
+                "Slow Fall"
+            ],
+            "5": [
+                "Extra Attack",
+                "Stunning Strike"
+            ]
+        },
+        "subclassLevel": 3,
+        "skillChoices": {
+            "choose": 2,
+            "from": [
+                "Acrobatics",
+                "Athletics",
+                "History",
+                "Insight",
+                "Religion",
+                "Stealth"
+            ]
+        },
+        "hitPoints": {
+            "level1": "8 + CON modifier (minimum 1)",
+            "laterLevels": "1d8 or fixed average + CON modifier (minimum 1 gained)"
+        },
+        "subclassDetails": {
+            "included": "names and selection level only",
+            "additionalFeatures": "See licensed SRD 5.2.1 for the included subclass; PHB for other subclasses"
+        }
+    },
+    "Paladin": {
+        "hitDie": 10,
+        "savingThrowProficiencies": [
+            "WIS",
+            "CHA"
+        ],
+        "spellcastingAbility": "CHA",
+        "featuresByLevel": {
+            "1": [
+                "Lay on Hands",
+                "Spellcasting",
+                "Weapon Mastery"
+            ],
+            "2": [
+                "Fighting Style",
+                "Paladin's Smite"
+            ],
+            "3": [
+                "Channel Divinity",
+                "Subclass"
+            ],
+            "4": [
+                "Ability Score Improvement"
+            ],
+            "5": [
+                "Extra Attack",
+                "Faithful Steed"
+            ]
+        },
+        "subclassLevel": 3,
+        "skillChoices": {
+            "choose": 2,
+            "from": [
+                "Athletics",
+                "Insight",
+                "Intimidation",
+                "Medicine",
+                "Persuasion",
+                "Religion"
+            ]
+        },
+        "hitPoints": {
+            "level1": "10 + CON modifier (minimum 1)",
+            "laterLevels": "1d10 or fixed average + CON modifier (minimum 1 gained)"
+        },
+        "subclassDetails": {
+            "included": "names and selection level only",
+            "additionalFeatures": "See licensed SRD 5.2.1 for the included subclass; PHB for other subclasses"
+        }
+    },
+    "Ranger": {
+        "hitDie": 10,
+        "savingThrowProficiencies": [
+            "STR",
+            "DEX"
+        ],
+        "spellcastingAbility": "WIS",
+        "featuresByLevel": {
+            "1": [
+                "Spellcasting",
+                "Favored Enemy",
+                "Weapon Mastery"
+            ],
+            "2": [
+                "Deft Explorer",
+                "Fighting Style"
+            ],
+            "3": [
+                "Subclass"
+            ],
+            "4": [
+                "Ability Score Improvement"
+            ],
+            "5": [
+                "Extra Attack"
+            ]
+        },
+        "subclassLevel": 3,
+        "skillChoices": {
+            "choose": 3,
+            "from": [
+                "Animal Handling",
+                "Athletics",
+                "Insight",
+                "Investigation",
+                "Nature",
+                "Perception",
+                "Stealth",
+                "Survival"
+            ]
+        },
+        "hitPoints": {
+            "level1": "10 + CON modifier (minimum 1)",
+            "laterLevels": "1d10 or fixed average + CON modifier (minimum 1 gained)"
+        },
+        "subclassDetails": {
+            "included": "names and selection level only",
+            "additionalFeatures": "See licensed SRD 5.2.1 for the included subclass; PHB for other subclasses"
+        }
+    },
+    "Rogue": {
+        "hitDie": 8,
+        "savingThrowProficiencies": [
+            "DEX",
+            "INT"
+        ],
+        "spellcastingAbility": null,
+        "featuresByLevel": {
+            "1": [
+                "Expertise",
+                "Sneak Attack",
+                "Thieves' Cant",
+                "Weapon Mastery"
+            ],
+            "2": [
+                "Cunning Action"
+            ],
+            "3": [
+                "Subclass",
+                "Steady Aim"
+            ],
+            "4": [
+                "Ability Score Improvement"
+            ],
+            "5": [
+                "Cunning Strike",
+                "Uncanny Dodge"
+            ]
+        },
+        "subclassLevel": 3,
+        "skillChoices": {
+            "choose": 4,
+            "from": [
+                "Acrobatics",
+                "Athletics",
+                "Deception",
+                "Insight",
+                "Intimidation",
+                "Investigation",
+                "Perception",
+                "Performance",
+                "Persuasion",
+                "Sleight of Hand",
+                "Stealth"
+            ]
+        },
+        "hitPoints": {
+            "level1": "8 + CON modifier (minimum 1)",
+            "laterLevels": "1d8 or fixed average + CON modifier (minimum 1 gained)"
+        },
+        "subclassDetails": {
+            "included": "names and selection level only",
+            "additionalFeatures": "See licensed SRD 5.2.1 for the included subclass; PHB for other subclasses"
+        }
+    },
+    "Sorcerer": {
+        "hitDie": 6,
+        "savingThrowProficiencies": [
+            "CON",
+            "CHA"
+        ],
+        "spellcastingAbility": "CHA",
+        "featuresByLevel": {
+            "1": [
+                "Spellcasting",
+                "Innate Sorcery"
+            ],
+            "2": [
+                "Font of Magic",
+                "Metamagic"
+            ],
+            "3": [
+                "Subclass"
+            ],
+            "4": [
+                "Ability Score Improvement"
+            ],
+            "5": [
+                "Sorcerous Restoration"
+            ]
+        },
+        "subclassLevel": 3,
+        "skillChoices": {
+            "choose": 2,
+            "from": [
+                "Arcana",
+                "Deception",
+                "Insight",
+                "Intimidation",
+                "Persuasion",
+                "Religion"
+            ]
+        },
+        "hitPoints": {
+            "level1": "6 + CON modifier (minimum 1)",
+            "laterLevels": "1d6 or fixed average + CON modifier (minimum 1 gained)"
+        },
+        "subclassDetails": {
+            "included": "names and selection level only",
+            "additionalFeatures": "See licensed SRD 5.2.1 for the included subclass; PHB for other subclasses"
+        }
+    },
+    "Warlock": {
+        "hitDie": 8,
+        "savingThrowProficiencies": [
+            "WIS",
+            "CHA"
+        ],
+        "spellcastingAbility": "CHA",
+        "featuresByLevel": {
+            "1": [
+                "Pact Magic",
+                "Eldritch Invocations"
+            ],
+            "2": [
+                "Magical Cunning"
+            ],
+            "3": [
+                "Subclass"
+            ],
+            "4": [
+                "Ability Score Improvement"
+            ],
+            "5": [
+                "Eldritch Invocations (additional)"
+            ]
+        },
+        "subclassLevel": 3,
+        "skillChoices": {
+            "choose": 2,
+            "from": [
+                "Arcana",
+                "Deception",
+                "History",
+                "Intimidation",
+                "Investigation",
+                "Nature",
+                "Religion"
+            ]
+        },
+        "hitPoints": {
+            "level1": "8 + CON modifier (minimum 1)",
+            "laterLevels": "1d8 or fixed average + CON modifier (minimum 1 gained)"
+        },
+        "subclassDetails": {
+            "included": "names and selection level only",
+            "additionalFeatures": "See licensed SRD 5.2.1 for the included subclass; PHB for other subclasses"
+        }
+    },
+    "Wizard": {
+        "hitDie": 6,
+        "savingThrowProficiencies": [
+            "INT",
+            "WIS"
+        ],
+        "spellcastingAbility": "INT",
+        "featuresByLevel": {
+            "1": [
+                "Spellcasting",
+                "Ritual Adept",
+                "Arcane Recovery"
+            ],
+            "2": [
+                "Scholar"
+            ],
+            "3": [
+                "Subclass"
+            ],
+            "4": [
+                "Ability Score Improvement"
+            ],
+            "5": [
+                "Memorize Spell"
+            ]
+        },
+        "subclassLevel": 3,
+        "skillChoices": {
+            "choose": 2,
+            "from": [
+                "Arcana",
+                "History",
+                "Insight",
+                "Investigation",
+                "Medicine",
+                "Religion"
+            ]
+        },
+        "hitPoints": {
+            "level1": "6 + CON modifier (minimum 1)",
+            "laterLevels": "1d6 or fixed average + CON modifier (minimum 1 gained)"
+        },
+        "subclassDetails": {
+            "included": "names and selection level only",
+            "additionalFeatures": "See licensed SRD 5.2.1 for the included subclass; PHB for other subclasses"
+        }
+    }
+}

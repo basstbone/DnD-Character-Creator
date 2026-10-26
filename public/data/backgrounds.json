@@ -1,0 +1,54 @@
+{
+    "Acolyte": {
+        "abilityOptions": [
+            "INT",
+            "WIS",
+            "CHA"
+        ],
+        "originFeat": "Magic Initiate",
+        "skillProficiencies": [
+            "Insight",
+            "Religion"
+        ],
+        "toolProficiency": "Calligrapher’s Supplies"
+    },
+    "Criminal": {
+        "abilityOptions": [
+            "DEX",
+            "CON",
+            "INT"
+        ],
+        "originFeat": "Alert",
+        "skillProficiencies": [
+            "Sleight of Hand",
+            "Stealth"
+        ],
+        "toolProficiency": "Thieves’ Tools"
+    },
+    "Sage": {
+        "abilityOptions": [
+            "CON",
+            "INT",
+            "WIS"
+        ],
+        "originFeat": "Magic Initiate",
+        "skillProficiencies": [
+            "Arcana",
+            "History"
+        ],
+        "toolProficiency": "Calligrapher’s Supplies"
+    },
+    "Soldier": {
+        "abilityOptions": [
+            "STR",
+            "DEX",
+            "CON"
+        ],
+        "originFeat": "Savage Attacker",
+        "skillProficiencies": [
+            "Athletics",
+            "Intimidation"
+        ],
+        "toolProficiency": "Gaming Set (choice)"
+    }
+}
