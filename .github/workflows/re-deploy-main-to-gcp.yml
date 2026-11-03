@@ -1,4 +1,3 @@
-
 name: re-deploy-main-to-gcp.yml
 
 on:
@@ -33,13 +32,13 @@ jobs:
           APP_DIR:  app/server # ${{ vars.APP_DIR }}
           PM2_NAME: app # ${{ vars.PM2_NAME }}
       run: |
-       ssh -i ~/.ssh/deploy_key -T "$SSH_USER@$SSH_HOST" <<EOF
-         set -e
+        ssh -i ~/.ssh/deploy_key -T "$SSH_USER@$SSH_HOST" <<EOF
+          set -e
 
-         cd "$APP_DIR"  
-         git pull
-         npm ci
+          cd "$APP_DIR"  
+          git pull
+          npm ci
        
-         pm2 restart "$PM2_NAME" || pm2 start app.js --name "$PM2_NAME"
-        pm2 save
-       EOF
+          pm2 restart "$PM2_NAME" || pm2 start app.js --name "$PM2_NAME"
+         pm2 save
+        EOF
