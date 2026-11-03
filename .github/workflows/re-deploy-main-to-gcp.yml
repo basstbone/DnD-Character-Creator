@@ -16,7 +16,7 @@ jobs:
           mkdir -p ~/.ssh
           chmod 700 ~/.ssh
 
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+          echo "-----BEGIN OPENSSH PRIVATE KEY-----b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZWQyNTUxOQAAACAYMvUx3RuO5cLhMD22BWL1ac+NjDNjMhXch9N1S1moowAAAKjZnACg2ZwAoAAAAAtzc2gtZWQyNTUxOQAAACAYMvUx3RuO5cLhMD22BWL1ac+NjDNjMhXch9N1S1moowAAAEA4xFYnVOElsQk3r/F7cr30D/+Fy2MqR2U5r14CVfAhRRgy9THdG47lwuEwPbYFYvVpz42MM2MyFdyH03VLWaijAAAAH21haW5sb2NhbFxzb2xpdmVyNUBDU00yNDUtTEFCMjcBAgMEBQY=-----END OPENSSH PRIVATE KEY----" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
 
           # safer than StrictHostKeyChecking=no
@@ -27,13 +27,13 @@ jobs:
       - name: Deploy over SSH
         shell: bash
         env:
-          SSH_USER: Sean #${{ secrets.SSH_USER }}
+          SSH_USER: soliver5 #Sean #${{ secrets.SSH_USER }}
           SSH_HOST: 34.152.7.76 #${{ secrets.SSH_HOST }}
           APP_DIR:  app/server # ${{ vars.APP_DIR }}
           PM2_NAME: app # ${{ vars.PM2_NAME }}
         run: |
-          ssh -i ~/.ssh/deploy_key -T "$SSH_USER@$SSH_HOST" <<EOF
-            set -e
+           ssh -i ~/.ssh/deploy_key -T "$SSH_USER@$SSH_HOST" <<EOF
+           set -e
 
             cd "$APP_DIR"
           
