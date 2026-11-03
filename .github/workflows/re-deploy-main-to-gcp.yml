@@ -16,7 +16,7 @@ jobs:
           mkdir -p ~/.ssh
           chmod 700 ~/.ssh
 
-          echo "${{ secrets.SSH_TEMP_KEY }}" > ~/.ssh/deploy_key
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
 
           # safer than StrictHostKeyChecking=no
@@ -27,18 +27,20 @@ jobs:
       - name: Deploy over SSH
         shell: bash
         env:
-          SSH_USER: soliver5 #${{ secrets.SSH_USER }}
+          SSH_USER: seanolivertbone #${{ secrets.SSH_USER }}
           SSH_HOST: 34.152.7.76 #${{ secrets.SSH_HOST }}
           APP_DIR:  app/server # ${{ vars.APP_DIR }}
           PM2_NAME: app # ${{ vars.PM2_NAME }}
-      run: |
-        ssh -i ~/.ssh/deploy_key -T "$SSH_USER@$SSH_HOST" <<EOF
-          set -e
+        run: |
+          ssh -i ~/.ssh/deploy_key -T "$SSH_USER@$SSH_HOST" <<EOF
+            set -e
 
-          cd "$APP_DIR"  
-          git pull
-          npm ci
-       
-          pm2 restart "$PM2_NAME" || pm2 start app.js --name "$PM2_NAME"
-         pm2 save
-        EOF
+            cd "$APP_DIR"
+          
+            git pull
+            npm ci
+
+            pm2 restart "$PM2_NAME" || pm2 start app.js --name "$PM2_NAME"
+
+            pm2 save
+          EOF
