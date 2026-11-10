@@ -348,8 +348,7 @@ async function initializeCharacterCreator() {
         const message = document.createElement("p");
 
         message.textContent =
-            "Automatically applies +1 to " +
-            background.abilityOptions.join(", ") + ".";
+            "Automatically applies +1 to " + background.abilityOptions.join(", ") + ".";
 
         container.append(message);
 
