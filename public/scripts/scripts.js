@@ -343,22 +343,20 @@ async function initializeCharacterCreator() {
     const increaseMethod =
       getElement("increaseMethod").value;
 
+    
     if (increaseMethod === "1-1-1") {
 
         const message = document.createElement("p");
-
-        message.textContent =
-            "Automatically applies +1 to ";
-          
-        const abilityList = document.createElement("p");
-
-        abilityList.textContent =
-          background.abilityOptions.join(", ");
-
-        container.append(message, abilityList);
-
+    
+        message.innerHTML =
+            "Automatically applies +1 to:<br>" +
+            background.abilityOptions.join(", ");
+    
+        container.append(message);
+    
         return;
     }
+
 
     const increases = [2, 1];
 
