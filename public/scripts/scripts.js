@@ -154,7 +154,7 @@ async function initializeCharacterCreator() {
 
             input.add(
               new Option(
-                score + " (slot " + (index + 1) + ")",
+                score,
                 index
               )
             );
