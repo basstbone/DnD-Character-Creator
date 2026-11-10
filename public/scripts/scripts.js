@@ -343,38 +343,42 @@ async function initializeCharacterCreator() {
     const increaseMethod =
       getElement("increaseMethod").value;
 
-    let increases;
+    
+    if (increaseMethod === "1-1-1") {
 
-    if (increaseMethod === "2-1") {
-      increases = [2, 1];
-    } else {
-      increases = [1, 1, 1];
+        const message = document.createElement("p");
+    
+        message.innerHTML =
+            "Automatically applies +1 to:<br>" +
+            background.abilityOptions.join(", ");
+    
+        container.append(message);
+    
+        return;
     }
 
-    increases.forEach(function (increase, index) {
 
-      const select = document.createElement("select");
+    const increases = [2, 1];
 
-      select.id = "boost" + index;
-      select.required = true;
+    increases.forEach(function(increase, index) {
 
-      select.add(
-        new Option("Choose ability", "")
-      );
+        const select = document.createElement("select");
 
-      for (const ability of background.abilityOptions) {
+        select.id = "boost" + index;
+        select.required = true;
 
-        select.add(
-          new Option(ability, ability)
+        select.add(new Option("Choose ability", ""));
+
+        for (const ability of background.abilityOptions) {
+            select.add(new Option(ability, ability));
+        }
+
+        container.append(
+            createLabeledInput(
+                "+" + increase + " increase",
+                select
+            )
         );
-      }
-
-      container.append(
-        createLabeledInput(
-          "+" + increase + " increase",
-          select
-        )
-      );
     });
   }
 
@@ -478,87 +482,74 @@ async function initializeCharacterCreator() {
     event.preventDefault();
 
     const background =
-      data.backgrounds[getElement("background").value];
+        data.backgrounds[getElement("background").value];
 
     const characterClass =
-      data.classes[getElement("characterClass").value];
+        data.classes[getElement("characterClass").value];
 
     const increaseMethod =
-      getElement("increaseMethod").value;
-
-    let increases;
-
-    if (increaseMethod === "2-1") {
-      increases = [2, 1];
-    } else {
-      increases = [1, 1, 1];
-    }
-
-    const targets = [];
-
-    for (let i = 0; i < increases.length; i++) {
-
-      targets.push(
-        getElement("boost" + i).value
-      );
-    }
-
-    if (
-      targets.includes("") ||
-      new Set(targets).size !== targets.length
-    ) {
-
-      alert(
-        "Choose a different eligible ability " +
-        "for each increase."
-      );
-
-      return;
-    }
+        getElement("increaseMethod").value;
 
     let scores;
 
+    // Get and validate the base ability scores.
     try {
-
-      scores = getBaseScores();
-
-      getElement("scoreError").textContent = "";
-
+        scores = getBaseScores();
+        getElement("scoreError").textContent = "";
     } catch (error) {
-
-      getElement("scoreError").textContent =
-        error.message;
-
-      return;
+        getElement("scoreError").textContent = error.message;
+        return;
     }
 
-    for (let i = 0; i < targets.length; i++) {
+    if (increaseMethod === "1-1-1") {
 
-      scores[targets[i]] += increases[i];
+        // Automatically apply +1 to each background ability.
+        for (const ability of background.abilityOptions) {
+            scores[ability] += 1;
+        }
+
+    } else {
+
+        // Let the user select the +2 and +1 abilities.
+        const firstAbility = getElement("boost0").value;
+        const secondAbility = getElement("boost1").value;
+
+        if (
+            !firstAbility ||
+            !secondAbility ||
+            firstAbility === secondAbility
+        ) {
+            alert(
+                "Choose two different abilities for " +
+                "the +2 and +1 increases."
+            );
+            return;
+        }
+
+        // Apply the selected increases.
+        scores[firstAbility] += 2;
+        scores[secondAbility] += 1;
     }
 
+    // Check that no ability exceeds 20.
     for (const ability of abilities) {
 
-      if (scores[ability] > 20) {
-
-        alert(
-          "Ability scores cannot exceed 20 " +
-          "from background increases."
-        );
-
-        return;
-      }
+        if (scores[ability] > 20) {
+            alert(
+                "Ability scores cannot exceed 20 " +
+                "from background increases."
+            );
+            return;
+        }
     }
 
-    const level = Number(
-      getElement("level").value
-    );
+    const level = Number(getElement("level").value);
 
     showCharacterPreview(
-      scores,
-      level,
-      characterClass,
-      background
+        scores,
+        level,
+        characterClass,
+        background
     );
   }
 
