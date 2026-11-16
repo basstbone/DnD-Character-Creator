@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Open5e Test</title>
+</head>
+<body>
+
+    <h1>Open5e Species</h1>
+
+    <select id="species">
+        <option>Loading...</option>
+    </select>
+
+    <p id="message"></p>
+
+    <script>
+        async function loadSpecies() {
+
+            const dropdown =
+                document.getElementById("species");
+
+            const message =
+                document.getElementById("message");
+
+            try {
+
+                const url =
+                    "https://api.open5e.com/v2/species/" +
+                    "?document__key__in=srd-2024";
+
+                const response = await fetch(url);
+
+                if (!response.ok) {
+                    throw new Error("Could not load species");
+                }
+
+                const data = await response.json();
+
+                dropdown.replaceChildren();
+
+                dropdown.add(
+                    new Option("Choose a species", "")
+                );
+
+                for (const species of data.results) {
+
+                    dropdown.add(
+                        new Option(species.name, species.key)
+                    );
+                }
+
+                message.textContent =
+                    "Species loaded successfully!";
+
+            } catch (error) {
+
+                message.textContent = error.message;
+                console.error(error);
+            }
+        }
+
+        loadSpecies();
+    </script>
+
+</body>
+</html>
