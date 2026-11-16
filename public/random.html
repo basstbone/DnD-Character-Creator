@@ -6,24 +6,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Character | D&D Character Creator</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/scripts.js" defer></script>
+    <script src="scripts/random.js" defer></script>
 </head>
 
 <body>
     <header>
         <h1>D&D Character Creator</h1>
-        <nav aria-label="Main navigation"><a href="index.html">Home</a>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
             <a href="create.html">Create Character</a>
             <a href="random.html" class="active">Random Character</a>
             <a href="characters.html">My Characters</a>
         </nav>
     </header>
     <main>
-        <section class="page-content">
+        <section class="character-form">
+    
             <h2>Random Character Generator</h2>
-            <p>Generate a random D&D character with just a few clicks.</p>
-            <p>Random character generation coming soon!</p><a class="button" href="create.html">Create Character
-                Instead</a>
+    
+            <p>
+                Generate a random D&D character using
+                SRD 5.2.1 character options.
+            </p>
+    
+            <p id="randomLoading" role="status">
+                Loading character data...
+            </p>
+    
+            <p id="randomError" role="alert"></p>
+    
+            <div id="generatorControls" hidden>
+    
+                <fieldset>
+                    <legend>Character Options</legend>
+    
+                    <div class="form-group">
+                        <label for="randomName">Character Name</label>
+                        <input
+                            type="text"
+                            id="randomName"
+                            placeholder="Leave blank for a random name"
+                        >
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="randomSpecies">Species</label>
+                        <select id="randomSpecies">
+                            <option value="">Random</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="randomClass">Class</label>
+                        <select id="randomClass">
+                            <option value="">Random</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="randomBackground">Background</label>
+                        <select id="randomBackground">
+                            <option value="">Random</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="randomLevel">Level</label>
+                        <select id="randomLevel">
+                            <option value="">Random (1-5)</option>
+                            <option value="1">Level 1</option>
+                            <option value="2">Level 2</option>
+                            <option value="3">Level 3</option>
+                            <option value="4">Level 4</option>
+                            <option value="5">Level 5</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="randomScoreMethod">
+                            Ability Score Method
+                        </label>
+    
+                        <select id="randomScoreMethod">
+                            <option value="standard">
+                                Standard Array
+                            </option>
+                            <option value="rolled">
+                                Roll 4d6 (Drop Lowest)
+                            </option>
+                            <option value="pointBuy">
+                                Point Cost (27 Points)
+                            </option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="randomIncreaseMethod">
+                            Background Ability Increases
+                        </label>
+    
+                        <select id="randomIncreaseMethod">
+                            <option value="random">
+                                Random
+                            </option>
+                            <option value="2-1">
+                                +2 to One, +1 to Another
+                            </option>
+                            <option value="1-1-1">
+                                +1 to All Three
+                            </option>
+                        </select>
+                    </div>
+                </fieldset>
+    
+                <div class="form-buttons">
+                    <button type="button" id="generateCharacter">
+                        Generate Character
+                    </button>
+    
+                    <button type="button"
+                            id="resetGenerator"
+                            class="reset-button">
+                        Reset Options
+                    </button>
+                </div>
+    
+            </div>
+    
+            <section id="randomResult" hidden
+                     aria-live="polite">
+    
+                <h2>Your Random Character</h2>
+    
+                <div id="characterOutput"></div>
+    
+                <div class="form-buttons">
+                    <button type="button" id="rerollCharacter">
+                        Generate Again
+                    </button>
+                </div>
+    
+            </section>
+    
         </section>
     </main>
     <footer>
