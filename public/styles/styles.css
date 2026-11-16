@@ -342,3 +342,74 @@ select:disabled {
 [hidden] {
     display: none !important;
 }
+
+
+/* Random Character Generator */
+
+[hidden] {
+    display: none !important;
+}
+
+#randomResult {
+    margin-top: 30px;
+    padding: 25px;
+    background: #30333d;
+    border: 1px solid #b99250;
+    border-radius: 8px;
+}
+
+#randomResult h2,
+#randomResult h3 {
+    color: #e4bd79;
+}
+
+.random-summary {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.random-score-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.random-score-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 18px;
+    background: #242730;
+    border: 1px solid #b99250;
+    border-radius: 8px;
+}
+
+.random-score-number {
+    font-size: 28px;
+    font-weight: bold;
+    color: #e4bd79;
+}
+
+.random-feature-list {
+    padding-left: 25px;
+    line-height: 1.8;
+}
+
+.random-note {
+    margin-top: 20px;
+    color: #d0c6bb;
+    font-size: 14px;
+    font-style: italic;
+}
+
+#randomError {
+    color: #ff9c9c;
+}
+
+@media (max-width: 600px) {
+    .random-score-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
