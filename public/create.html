@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Create Character | 5E Compatible</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/open5e.js" defer></script>
     <script src="scripts/scripts.js" defer></script>
 </head>
 
@@ -92,6 +93,13 @@
                 <div class="form-buttons"><button type="reset" class="reset-button">Reset Form</button><button
                         class="button" type="submit">Preview Character</button></div>
             </form>
+            <section class="open5e-details">
+                <h2>Character Information</h2>
+
+                <div id="speciesDetails"></div>
+                <div id="classDetails"></div>
+                <div id="backgroundDetails"></div>
+            </section>
             <section id="preview" aria-live="polite" hidden></section>
         </section>
     </main>

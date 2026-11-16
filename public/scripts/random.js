@@ -51,7 +51,7 @@ async function initializeRandomGenerator() {
         ];
 
         const results = await Promise.all(
-            names.map(async function(name) {
+            names.map(async function (name) {
 
                 const response = await fetch(
                     "data/" + name + ".json"
@@ -69,7 +69,7 @@ async function initializeRandomGenerator() {
 
         const loadedData = {};
 
-        names.forEach(function(name, index) {
+        names.forEach(function (name, index) {
             loadedData[name] = results[index];
         });
 
@@ -103,7 +103,7 @@ async function initializeRandomGenerator() {
         ];
 
         return randomItem(firstNames) + " " +
-               randomItem(lastNames);
+            randomItem(lastNames);
     }
 
     // Roll 4 six-sided dice and drop the lowest.
@@ -115,7 +115,7 @@ async function initializeRandomGenerator() {
             dice.push(randomNumber(1, 6));
         }
 
-        dice.sort(function(a, b) {
+        dice.sort(function (a, b) {
             return a - b;
         });
 
@@ -148,7 +148,7 @@ async function initializeRandomGenerator() {
 
         const scores = {};
 
-        abilities.forEach(function(ability, index) {
+        abilities.forEach(function (ability, index) {
             scores[ability] = values[index];
         });
 
@@ -291,7 +291,7 @@ async function initializeRandomGenerator() {
         );
 
         return firstLevelHP +
-               (level - 1) * additionalHP;
+            (level - 1) * additionalHP;
     }
 
     // Create an HTML element containing text.
@@ -590,6 +590,24 @@ async function initializeRandomGenerator() {
             Object.keys(data.backgrounds)
         );
 
+        Open5e.attachDetails(
+            "randomSpecies",
+            "species",
+            "randomSpeciesDetails"
+        );
+
+        Open5e.attachDetails(
+            "randomClass",
+            "classes",
+            "randomClassDetails"
+        );
+
+        Open5e.attachDetails(
+            "randomBackground",
+            "backgrounds",
+            "randomBackgroundDetails"
+        );
+
         getElement("randomLoading").hidden = true;
         getElement("generatorControls").hidden = false;
 
@@ -618,7 +636,7 @@ async function initializeRandomGenerator() {
 
     getElement("resetGenerator").addEventListener(
         "click",
-        function() {
+        function () {
 
             getElement("randomName").value = "";
             getElement("randomSpecies").value = "";
